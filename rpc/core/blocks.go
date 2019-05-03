@@ -377,8 +377,8 @@ func Commit(ctx *rpctypes.Context, heightPtr *int64) (*ctypes.ResultCommit, erro
 //       },
 //       {
 //         "code": 1,
-//				 "codespace": "ibc",
-//	       "log": "not enough gas",
+//         "codespace": "ibc",
+//         "log": "not enough gas",
 //         "gas_wanted": 1,
 //         "gas_used": 2,
 //         "tags": [
