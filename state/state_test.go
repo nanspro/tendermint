@@ -99,7 +99,7 @@ func TestABCIResponsesSaveLoad1(t *testing.T) {
 		types.TM2PB.NewValidatorUpdate(ed25519.GenPrivKey().PubKey(), 10),
 	}}
 
-	saveABCIResponses(stateDB, block.Height, abciResponses)
+	SaveABCIResponses(stateDB, block.Height, abciResponses)
 	loadedABCIResponses, err := LoadABCIResponses(stateDB, block.Height)
 	assert.Nil(err)
 	assert.Equal(abciResponses, loadedABCIResponses,
@@ -164,7 +164,7 @@ func TestABCIResponsesSaveLoad2(t *testing.T) {
 			DeliverTx: tc.added,
 			EndBlock:  &abci.ResponseEndBlock{},
 		}
-		saveABCIResponses(stateDB, h, responses)
+		SaveABCIResponses(stateDB, h, responses)
 	}
 
 	// Query all before, should return expected value.
