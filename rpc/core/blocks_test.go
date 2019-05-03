@@ -88,9 +88,9 @@ func TestBlockResults(t *testing.T) {
 		{0, true, nil},
 		{101, true, nil},
 		{100, false, &ctypes.ResultBlockResults{
-			Height:     100,
-			TxsResults: results.DeliverTx,
-			ValidatorUpdates: results.EndBlock.ValidatorUpdates,
+			Height:                100,
+			TxsResults:            results.DeliverTx,
+			ValidatorUpdates:      results.EndBlock.ValidatorUpdates,
 			ConsensusParamUpdates: results.EndBlock.ConsensusParamUpdates,
 		}},
 	}
